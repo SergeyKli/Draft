@@ -46,7 +46,23 @@
 
 - `start`- запуск таскранера GULP, изменение файлов стилей в момент их сохранения;
 - `build` - формирование актуального Components-preload.js и файлов стилей;
-- `styleBuild` - сборка акутальных файлов стилей.
+- `styleBuild` - сборка акутальных файлов стилей;
+- `test` - запуск unit тестов в консольном режиме;
+- `critical-test` - запуск критических unit тестов в консольном режиме;
+- `deploy` - изменение файлов для актуализации кеша и использование команды build;
+- `change-configuration` - обновление файла конфигурации. Принимает следующий аргумент **_path_** (toDevelopment или toProduction)
+
+        Пример использования: npm run change-configuration --path=toProduction
+
+- `change-version` - смена версии проекта и запуск команды deploy. Нужно указать два аргумента:
+
+  - старая версия (--old-version) - 1.70.0;
+  - новая версия (--new-version) - 1.71.0.
+
+        Пример использования: npm run change-version --old-version=1.70.0 --new-version=1.71.0
+
+- `production-build` - переключение api с dev режима на prod режим;
+- `development-build` - переключение api с prod режима на dev режим.
 
 ## Практики по контроллерам
 
