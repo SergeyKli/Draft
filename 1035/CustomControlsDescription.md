@@ -6,6 +6,7 @@
 - [DiscussItem](#discussItem)
 - [HoverButton](#hoverButton)
 - [ImportanceLabel](#importanceLabel)
+- [ImportanceSelect](#importanceSelect)
 
 ### <a id="contactGroupSelect">ContactsGroupSelect</a>
 
@@ -105,3 +106,35 @@ Example:
             importance="Важно"
             visible="true"
         />
+
+### <a id="importanceSelect">ImportanceSelect</a>
+
+Контрол с возможностью выбора важности сущности (процесса, задачи).
+
+Properties:
+
+| Cвойство    | Тип    | По умолчанию | Описание                                             |
+| ----------- | ------ | ------------ | ---------------------------------------------------- |
+| placeholder | string | -            | Текст при отсутствующем значении выбранного элемента |
+
+Events:
+
+| Событие        | Параметры   | Описание                        |
+| -------------- | ----------- | ------------------------------- |
+| pressSelectBtn | id - string | Срабатывает при выборе элемента |
+
+Example:
+
+        <ac:ImportanceSelect
+            placeholder="Выберите из списка"
+            pressSelectBtn="onPressSelectBtn"
+        />
+
+Примечания.
+
+Элемент содержит кастомные данные по умолчанию:
+
+- `importance-0` - без важности;
+- `importance-1` - обычная;
+- `importance-2` - приоритетная;
+- `importance-3` - важная;
