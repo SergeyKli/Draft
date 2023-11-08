@@ -7,6 +7,10 @@
 - [HoverButton](#hoverButton)
 - [ImportanceLabel](#importanceLabel)
 - [ImportanceSelect](#importanceSelect)
+- [MultiComboBoxWithCustomToken](#multiComboBoxWithCustomToken)
+- [MultiComboBoxWithOpenEvent](#multiComboBoxWithOpenEvent)
+- [MultiComboBoxWithOneVisibleTokens](#multiComboBoxWithOneVisibleTokens)
+- [MultiComboBoxWithoutVisibleTokens](#multiComboBoxWithoutVisibleTokens)
 
 ### <a id="contactGroupSelect">ContactsGroupSelect</a>
 
@@ -138,3 +142,27 @@ Example:
 - `importance-1` - обычная;
 - `importance-2` - приоритетная;
 - `importance-3` - важная;
+
+### <a id="multiComboBoxWithCustomToken">MultiComboBoxWithCustomToken</a>
+
+Мультикомбобокс с кастомными элементами выбранных значений. Отображаются в контроле при выборе элементов.
+
+Наследуется от [sap.m.MultiComboBox](https://sapui5.hana.ondemand.com/#/api/sap.m.MultiComboBox)
+
+### <a id="multiComboBoxWithOpenEvent">MultiComboBoxWithOpenEvent</a>
+
+Мультикомбобокс, содержащий возможность открытия списка при клике на весь контрол.
+
+Наследуется от [sap.m.MultiComboBox](https://sapui5.hana.ondemand.com/#/api/sap.m.MultiComboBox)
+
+### <a id="multiComboBoxWithOneVisibleTokens">MultiComboBoxWithOneVisibleTokens</a>
+
+Мультикомбобокс с отображением выбранного элемента в контроле при условии, если выбран один элемент.
+
+Наследуется от [MultiComboBoxWithOpenEvent](#multiComboBoxWithOpenEvent)
+
+### <a id="multiComboBoxWithoutVisibleTokens">MultiComboBoxWithoutVisibleTokens</a>
+
+мультикомбобокс с кастомными элементами, при выборе которых отображается только их количество.
+
+Наследуется от [MultiComboBoxWithOpenEvent](#multiComboBoxWithOpenEvent)
