@@ -11,6 +11,8 @@
 - [MultiComboBoxWithOpenEvent](#multiComboBoxWithOpenEvent)
 - [MultiComboBoxWithOneVisibleTokens](#multiComboBoxWithOneVisibleTokens)
 - [MultiComboBoxWithoutVisibleTokens](#multiComboBoxWithoutVisibleTokens)
+- [NavigationAnimatedItem](#navigationAnimatedItem)
+- [NavigationTreePopupItem](#navigationTreePopupItem)
 
 ### <a id="contactGroupSelect">ContactsGroupSelect</a>
 
@@ -163,6 +165,18 @@ Example:
 
 ### <a id="multiComboBoxWithoutVisibleTokens">MultiComboBoxWithoutVisibleTokens</a>
 
-мультикомбобокс с кастомными элементами, при выборе которых отображается только их количество.
+Мультикомбобокс с кастомными элементами, при выборе которых отображается только их количество.
 
 Наследуется от [MultiComboBoxWithOpenEvent](#multiComboBoxWithOpenEvent)
+
+### <a id="navigationAnimatedItem">NavigationAnimatedItem</a>
+
+Контрол элемента навигации с анимацией.
+
+Наследуется от [sap.tnt.NavigationListItem](https://sapui5.hana.ondemand.com/#/api/sap.tnt.NavigationListItem)
+
+### <a id="navigationTreePopupItem">NavigationTreePopupItem</a>
+
+Контрол, служащий для отображения поповера для минимизированного бокового меню
+
+Наследуется от [sap.tnt.NavigationListItem](https://sapui5.hana.ondemand.com/#/api/sap.tnt.NavigationListItem)
