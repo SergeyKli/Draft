@@ -14,6 +14,8 @@
 - [NavigationAnimatedItem](#navigationAnimatedItem)
 - [NavigationTreePopupItem](#navigationTreePopupItem)
 - [NavigationTreeItem](#navigationTreeItem)
+- [Password](#password)
+- [SearchContact](#searchContact)
 
 ### <a id="contactGroupSelect">ContactsGroupSelect</a>
 
@@ -193,3 +195,70 @@ Properties:
 | Cвойство | Тип     | По умолчанию | Описание                                |
 | -------- | ------- | ------------ | --------------------------------------- |
 | expanded | boolean | false        | Свойство отвечающее за раскрытие списка |
+
+Example:
+
+        <ac:NavigationTreeItem
+            text="Название пункта меню"
+            expanded="false"
+        />
+
+### <a id="password">Password</a>
+
+Контрол, представляющий собой инпут ввода пароля.
+
+Properties:
+
+| Cвойство    | Тип    | По умолчанию | Описание                                |
+| ----------- | ------ | ------------ | --------------------------------------- |
+| placeholder | string | -            | Текст при отсутствующем значении пароля |
+
+Events:
+
+| Событие    | Параметры      | Описание                                                      |
+| ---------- | -------------- | ------------------------------------------------------------- |
+| liveChange | value - string | Срабатывает при вводе значения в инпут                        |
+| submit     | value - string | Срабатывает при нажатии на Enter после ввода значения в инпут |
+
+Example:
+
+        <ac:Password
+            placeholder="Введите пароль"
+            liveChange="onLiveChange"
+            submit="onSubmit"
+        />
+
+### <a id="searchContact">SearchContact</a>
+
+Контрол, применяющийся при выборе ответственного контакта
+
+Properties:
+
+| Cвойство           | Тип     | По умолчанию                   | Описание                                    |
+| ------------------ | ------- | ------------------------------ | ------------------------------------------- |
+| value              | string  | -                              | Значение в инпуте                           |
+| placeholder        | string  | -                              | Текст при отсутствующем значении инпута     |
+| showValueHelp      | boolean | true                           | Свойство, отвечающее за показ иконки поиска |
+| valueHelpIconSrc   | string  | sap-icon://tarkett/icon-search | Иконка поиска                               |
+| busyIndicatorDelay | string  | 0                              | Задержка индикатора загрузки                |
+
+Events:
+
+| Событие    | Параметры                           | Описание                                                      |
+| ---------- | ----------------------------------- | ------------------------------------------------------------- |
+| liveChange | value - string<br>newValue - string | Срабатывает при вводе значения в инпут                        |
+| press      | value - string                      | Срабатывает при нажатии на Enter после ввода значения в инпут |
+
+Example:
+
+        <ac:SearchContact
+            liveChange="onLiveChange"
+            items="{Model>/items}">
+            <ac:items>
+                <CustomListItem press="onPress">
+                    <Avatar src="assets/images/defaultAvatar.png" />
+                    <Text text="{Documents>text}" />
+                    <Text text="TarkettEE" />
+                </CustomListItem>
+            </ac:items>
+        </ac:SearchContact>
