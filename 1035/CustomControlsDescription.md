@@ -22,6 +22,8 @@
 - [TokenizerWithOneVisibleTokens](#tokenizerWithOneVisibleTokens)
 - [TokenizerWithoutVisibleTokens](#tokenizerWithoutVisibleTokens)
 - [TokenWithItemsTooltip](#tokenWithItemsTooltip)
+- [Tooltip](#tooltip)
+- [TooltipRenderer](#tooltipRenderer)
 
 ### <a id="contactGroupSelect">ContactsGroupSelect</a>
 
@@ -362,3 +364,32 @@ Example:
 
 Наследуется от [sap.m.Token](https://sapui5.hana.ondemand.com/#/api/sap.m.Token)<br>
 Используется для [MultiComboBoxWithCustomToken](#multiComboBoxWithCustomToken)
+
+### <a id="tooltip">Tooltip</a>
+
+Кастомный тултип.
+
+Наследуется от [sap.ui.core.TooltipBase](https://sapui5.hana.ondemand.com/#/api/sap.ui.core.TooltipBase)
+
+Properties:
+
+| Cвойство | Тип                                                                               | По умолчанию | Описание                    |
+| -------- | --------------------------------------------------------------------------------- | ------------ | --------------------------- |
+| maxWidth | [sap.ui.core.CSSSize](https://sapui5.hana.ondemand.com/#/api/sap.ui.core.CSSSize) | 450px        | Максимальная ширина тултипа |
+| width    | [sap.ui.core.CSSSize](https://sapui5.hana.ondemand.com/#/api/sap.ui.core.CSSSize) | auto         | Ширина тултипа              |
+| height   | [sap.ui.core.CSSSize](https://sapui5.hana.ondemand.com/#/api/sap.ui.core.CSSSize) | auto         | Высота тултипа              |
+
+Example:
+
+        <ac:Tooltip
+            offset="7 8"
+            openDelay="300"
+            class="tooltip">
+            <Text text="Текст контента" />
+        </ac:Tooltip>
+
+### <a id="tooltipRenderer">TooltipRenderer</a>
+
+Кастомный элемент, использующийся при формировании кастомного тултипа.
+
+Используетя для [Tooltip](#tooltip)
