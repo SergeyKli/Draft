@@ -18,6 +18,10 @@
 - [SearchContact](#searchContact)
 - [SelectWithPopover](#selectWithPopover)
 - [SelectWithList](#selectWithList)
+- [TableWithPartialSelect](#tableWithPartialSelect)
+- [TokenizerWithOneVisibleTokens](#tokenizerWithOneVisibleTokens)
+- [TokenizerWithoutVisibleTokens](#tokenizerWithoutVisibleTokens)
+- [TokenWithItemsTooltip](#tokenWithItemsTooltip)
 
 ### <a id="contactGroupSelect">ContactsGroupSelect</a>
 
@@ -331,3 +335,30 @@ Example:
             itemPress="onItemPress"
             liveChange="onLiveChange"
         />
+
+### <a id="tableWithPartialSelect">TableWithPartialSelect</a>
+
+Таблица с промеуточым состоянием селекта, отвечающего за выбор всех элементов.
+
+Наследуется от [sap.ui.table.Table](https://sapui5.hana.ondemand.com/#/api/sap.ui.table.Table)
+
+### <a id="tokenizerWithOneVisibleTokens">TokenizerWithOneVisibleTokens</a>
+
+Токен, использующийся для мультикомбобокса с одним видимым элементом выбора.
+
+Наследуется от [sap.m.Tokenizer](https://sapui5.hana.ondemand.com/#/api/sap.m.Tokenizer)<br>
+Используется для [MultiComboBoxWithOneVisibleTokens](#multiComboBoxWithOneVisibleTokens)
+
+### <a id="tokenizerWithoutVisibleTokens">TokenizerWithoutVisibleTokens</a>
+
+Токен, использующийся для мультикомбобокса без видимых элементов при выборе.
+
+Наследуется от [sap.m.Tokenizer](https://sapui5.hana.ondemand.com/#/api/sap.m.Tokenizer)<br>
+Используется для [MultiComboBoxWithoutVisibleTokens](#multiComboBoxWithoutVisibleTokens)
+
+### <a id="tokenWithItemsTooltip">TokenWithItemsTooltip</a>
+
+Кастомный, стандартный токен. Используется при выборе элементов мультикомбобокса.
+
+Наследуется от [sap.m.Token](https://sapui5.hana.ondemand.com/#/api/sap.m.Token)<br>
+Используется для [MultiComboBoxWithCustomToken](#multiComboBoxWithCustomToken)
