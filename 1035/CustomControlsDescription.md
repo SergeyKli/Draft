@@ -16,6 +16,8 @@
 - [NavigationTreeItem](#navigationTreeItem)
 - [Password](#password)
 - [SearchContact](#searchContact)
+- [SelectWithPopover](#selectWithPopover)
+- [SelectWithList](#selectWithList)
 
 ### <a id="contactGroupSelect">ContactsGroupSelect</a>
 
@@ -230,14 +232,14 @@ Example:
 
 ### <a id="searchContact">SearchContact</a>
 
-Контрол, применяющийся при выборе ответственного контакта
+Контрол, применяющийся при выборе ответственного контакта.
 
 Properties:
 
 | Cвойство           | Тип     | По умолчанию                   | Описание                                    |
 | ------------------ | ------- | ------------------------------ | ------------------------------------------- |
 | value              | string  | -                              | Значение в инпуте                           |
-| placeholder        | string  | -                              | Текст при отсутствующем значении инпута     |
+| placeholder        | string  | Введите имя контакта           | Текст при отсутствующем значении инпута     |
 | showValueHelp      | boolean | true                           | Свойство, отвечающее за показ иконки поиска |
 | valueHelpIconSrc   | string  | sap-icon://tarkett/icon-search | Иконка поиска                               |
 | busyIndicatorDelay | string  | 0                              | Задержка индикатора загрузки                |
@@ -262,3 +264,70 @@ Example:
                 </CustomListItem>
             </ac:items>
         </ac:SearchContact>
+
+### <a id="selectWithPopover">SelectWithPopover</a>
+
+Кнопка в виде селекта с предустановленным поповером.
+
+Наследуется от [sap.m.Button](https://sapui5.hana.ondemand.com/#/api/sap.ui.webc.main.Button)
+
+Properties:
+
+| Cвойство         | Тип                                                                               | По умолчанию           | Описание                             |
+| ---------------- | --------------------------------------------------------------------------------- | ---------------------- | ------------------------------------ |
+| offsetPopoverY   | string                                                                            | 5                      | Отступ поповера от элемента по оси Y |
+| placementPopover | [sap.m.PlacementType](https://sapui5.hana.ondemand.com/#/api/sap.m.PlacementType) | VerticalPreferedBottom | Положение поповера (сверху, снизу)   |
+
+Example:
+
+        <ac:SelectWithPopover
+            text="Текст в селекте"
+            offsetPopoverY="10"
+            placementPopover="VerticalPreferedBottom">
+            <HBox>
+                <Text
+                    class="text"
+                    text="Контент"
+                />
+            </HBox>
+        </ac:SelectWithPopover>
+
+### <a id="selectWithList">SelectWithList</a>
+
+Кнопка в виде селекта с предустановленным списком и инпутом поиска.
+
+Наследуется от [SelectWithPopover](#selectWithPopover)
+
+Properties:
+
+| Cвойство            | Тип                                                                               | По умолчанию | Описание                                |
+| ------------------- | --------------------------------------------------------------------------------- | ------------ | --------------------------------------- |
+| visibileSearchInput | boolean                                                                           | true         | Видимость инпута поиска                 |
+| visibleList         | boolean                                                                           | true         | Видимость списка элементов              |
+| listItems           | array                                                                             | []           | Список элементов, отображаемый в списке |
+| listCustomData      | array                                                                             | []           | Список кстомных данных списка           |
+| type                | [sap.m.ListType](https://sapui5.hana.ondemand.com/#/api/sap.m.ListType)           | Active       | Тип элементов списка                    |
+| mode                | [sap.m.ListMode](https://sapui5.hana.ondemand.com/#/api/sap.m.ListMode)           | MultiSelect  | Тип выбора элементов списка             |
+| height              | [sap.ui.core.CSSSize](https://sapui5.hana.ondemand.com/#/api/sap.ui.core.CSSSize) | 300px        | Высота поповера                         |
+
+Events:
+
+| Событие    | Параметры | Описание                                    |
+| ---------- | --------- | ------------------------------------------- |
+| select     | -         | Срабатывает при выборе элемента списка      |
+| itemPress  | -         | Срабатывает при нажатии на элемент списка   |
+| liveChange | -         | Срабатывает при вводе текста в инпут поиска |
+
+Example:
+
+        <ac:SelectWithList
+            text="Текст в селекте"
+            listItems="{Model>/listItems}"
+            listCustomData="{Model>/customDatas}"
+            type="Active"
+            mode="MultiSelect"
+            height="500px"
+            select="onSelect"
+            itemPress="onItemPress"
+            liveChange="onLiveChange"
+        />
