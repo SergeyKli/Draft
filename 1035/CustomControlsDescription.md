@@ -13,6 +13,7 @@
 - [MultiComboBoxWithoutVisibleTokens](#multiComboBoxWithoutVisibleTokens)
 - [NavigationAnimatedItem](#navigationAnimatedItem)
 - [NavigationTreePopupItem](#navigationTreePopupItem)
+- [NavigationTreeItem](#navigationTreeItem)
 
 ### <a id="contactGroupSelect">ContactsGroupSelect</a>
 
@@ -180,3 +181,15 @@ Example:
 Контрол, служащий для отображения поповера для минимизированного бокового меню
 
 Наследуется от [sap.tnt.NavigationListItem](https://sapui5.hana.ondemand.com/#/api/sap.tnt.NavigationListItem)
+
+### <a id="navigationTreeItem">NavigationTreeItem</a>
+
+Элемент навигации в главном меню, представляющий дерево.
+
+Наследуется от [NavigationAnimatedItem](#navigationAnimatedItem)
+
+Properties:
+
+| Cвойство | Тип     | По умолчанию | Описание                                |
+| -------- | ------- | ------------ | --------------------------------------- |
+| expanded | boolean | false        | Свойство отвечающее за раскрытие списка |
