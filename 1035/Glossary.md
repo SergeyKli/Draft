@@ -7,6 +7,8 @@
 - [Легаси](#legacy)
 - [МР / Merge requiest](#mr)
 - [BPM](#bpm)
+- [Stage API](#stageAPI)
+- [Prod API](#prodAPI)
 
 #### <a id="dialog">Диалоговое окно</a>
 
@@ -58,3 +60,15 @@
 #### <a id="bpm">BPM</a>
 
 Раздел "Бизнес процессы".
+
+#### <a id="stageAPI">Stage API</a>
+
+Версия API, которая используется при разработке функционала. Имеет префикс `units_staging`. Второе название `qual`.
+
+    Пример: https://is_dev.tarkett.ru/api/units_staging/pricing/ShippingReports/ProjectShippingReport
+
+#### <a id="prodAPI">Prod API</a>
+
+Версия API, которая используется на PROD'e. Имеет префикс `units`.
+
+    Пример: https://is_dev.tarkett.ru/api/units/pricing/ShippingReports/ProjectShippingReport
