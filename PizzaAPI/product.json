@@ -1,0 +1,1 @@
+{{{stringify ( oneOf ( filter ( dataRaw 'Products') ( object id = (urlParam 'id'))))}}}
